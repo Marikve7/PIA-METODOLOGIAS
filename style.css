@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #208080;
+}
+
+header {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 50px;
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 10px 20px rgba(64, 192, 192, 0.25);
+}
+
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.parrafo1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav .nav-btn {
+    text-decoration: none; 
+    display: inline-block;   
+    padding: 10px 20px;
+    color: #1b6363;
+    border-radius: 5px;
+    background-color: #efefef;
+}
+
+
+nav .nav-btn:hover {
+    background-color: #C0E0E0;
+}
+
+main {
+    margin-top: 90px;
+}
+
+.sect1 {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 60px;
+    gap: 40px;
+}
+
+.imgprincipal img {
+    width: 500px;
+}
+
+.btntxtprincipal {
+    max-width: 500px
+}
+
+.btntxtprincipal h2 {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #208080;
+    margin-bottom: 20px;
+}
+
+.btntxtprincipal button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #40c0c0;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btntxtprincipal button:hover {
+    background-color: #1b6363;
+}
+
+.h11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1b6363;
+    height: 500px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 70px 20px;
+}
+
+h2 {
+    color: #208080;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.servicio {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(5, 108, 242, 0.2);
+}
+
+.servicio img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.servicio h3 {
+    color: #208080;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #208080;
+}
+
+/* ===== Formulario de Cotización ===== */
+.cotizacion {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.cotizacion h3 {
+    color: #208080;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.descuentos {
+    margin: 10px 0;
+}
+
+.descuentos label {
+    font-weight: normal;
+}
+
+button {
+    background-color: #40c0c0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #208080;
+}
+
+.resultado {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #208080;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #208080;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px 20px;
+}
+
+/* ===== TARJETAS (como servicios) ===== */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* ===== LISTAS (misión y valores) ===== */
+.container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container ul li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== FAQ ===== */
+.faq-item {
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #40c0c0;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+/* ===== GALERÍA ===== */
+.galeria {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* ===== VIDEO ===== */
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.container {
+    margin-top: 120px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espacio entre imagen y texto */
+}
+
+.logo-img {
+    width: 35px; /* ajusta tamaño */
+    border-radius: 10px;
+    height: auto;
+}
+
+.parrafo1 {
+    font-size: 24px;
+    font-weight: bold;
+}
