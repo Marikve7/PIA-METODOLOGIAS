@@ -1,52 +1,108 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Dental Care</title>
-    <link rel="icon" href="img/logo.pag.png" type="img/png">
-    <link rel="stylesheet" href="style.css">
+
+    <title>Dental Care</title>
+
+    <link
+        rel="icon"
+        href="{% static 'pacientes/img/logo.pag.png' %}"
+        type="image/png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{% static 'pacientes/style.css' %}"
+    >
+
 </head>
+
 <body>
-    <header >
+
+    <header>
+
         <div class="encabezado">
+
             <div class="logo">
-                <img src="img/dentistalogo.png" alt="logo" class="logo-img">
+
+                <img
+                    src="{% static 'pacientes/img/dentistalogo.png' %}"
+                    alt="logo"
+                    class="logo-img"
+                >
+
                 <p class="parrafo1">Dental Care</p>
+
             </div>
 
             <nav>
-                <a href="sobrenosotros.html" class="nav-btn">¿Quienes somos?</a>
-                <a href="citas.html" class="nav-btn">Citas</a>
-                <a href="servicios.html" class="nav-btn">Servicios</a>
-                <a href="mitratamiento.html" class="nav-btn">Mi tratamiento</a>
-                <a href="contacto.html" class="nav-btn">Contacto</a>
-                
+
+                <a href="/sobrenosotros/" class="nav-btn">
+                    ¿Quiénes somos?
+                </a>
+
+                <a href="/" class="nav-btn">
+                    Citas
+                </a>
+
+                <a href="/servicios/" class="nav-btn">
+                    Servicios
+                </a>
+
+                <a href="/mitratamiento/" class="nav-btn">
+                    Mi tratamiento
+                </a>
+
+                <a href="/contacto/" class="nav-btn">
+                    Contacto
+                </a>
+
             </nav>
+
         </div>
+
     </header>
 
     <main>
+
         <section class="sect1">
 
             <div class="btntxtprincipal">
-                <h2>Tu salud dental, organizada y sin complicaciones.</h2>
-                <a href="citas.html">
-                    <button>Agendar Cita</button>
+
+                <h2>
+                    Tu salud dental, organizada y sin complicaciones.
+                </h2>
+
+                <a href="/">
+
+                    <button>
+                        Agendar Cita
+                    </button>
+
                 </a>
+
             </div>
 
             <div class="imgprincipal">
-                <img src="img/Oral care-amico (1).svg" alt="imagen principal">
+
+                <img
+                    src="{% static 'pacientes/img/Oral care-amico (1).svg' %}"
+                    alt="imagen principal"
+                >
+
             </div>
 
         </section>
 
-
-
-
-
     </main>
 
 </body>
+
 </html>

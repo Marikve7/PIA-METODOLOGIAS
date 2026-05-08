@@ -1,69 +1,135 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mi Tratamiento</title>
-  <link rel="icon" href="img/logo.pag.png" type="img/png">
-  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="icon"
+    href="{% static 'pacientes/img/logo.pag.png' %}"
+    type="image/png"
+  >
+
+  <link
+    rel="stylesheet"
+    href="{% static 'pacientes/style.css' %}"
+  >
+
 </head>
 
 <body>
 
 <header>
+
   <div class="encabezado">
+
     <div class="logo">
-      <img src="img/dentistalogo.png" alt="logo" class="logo-img">
+
+      <img
+        src="{% static 'pacientes/img/dentistalogo.png' %}"
+        alt="logo"
+        class="logo-img"
+      >
+
       <p class="parrafo1">Dental Care</p>
+
     </div>
 
     <nav>
-      <a href="dentista.html" class="nav-btn">Inicio</a>
-      <a href="sobrenosotros.html" class="nav-btn">¿Quienes somos?</a>
-      <a href="citas.html" class="nav-btn">Citas</a>
-      <a href="servicios.html" class="nav-btn">Servicios</a>
-      <a href="contacto.html" class="nav-btn">Contacto</a>
+
+      <a href="/dentista/" class="nav-btn">
+        Inicio
+      </a>
+
+      <a href="/sobrenosotros/" class="nav-btn">
+        ¿Quiénes somos?
+      </a>
+
+      <a href="/" class="nav-btn">
+        Citas
+      </a>
+
+      <a href="/servicios/" class="nav-btn">
+        Servicios
+      </a>
+
+      <a href="/contacto/" class="nav-btn">
+        Contacto
+      </a>
+
     </nav>
+
   </div>
+
 </header>
 
 <main>
 
 <section class="container">
+
   <h2>🦷 Mi Tratamiento</h2>
 
   <div class="grid">
 
     <div class="card">
+
       <h3>Tratamiento actual</h3>
-      <p id="tratamiento">Ortodoncia</p>
+
+      <p id="tratamiento">
+        Ortodoncia
+      </p>
+
     </div>
 
     <div class="card">
+
       <h3>Próxima cita</h3>
-      <p id="cita">25 de Marzo - 4:00 PM</p>
+
+      <p id="cita">
+        25 de Marzo - 4:00 PM
+      </p>
+
     </div>
 
     <div class="card">
+
       <h3>Indicaciones</h3>
-      <p id="indicaciones">Usar retenedor 8 horas al día</p>
+
+      <p id="indicaciones">
+        Usar retenedor 8 horas al día
+      </p>
+
     </div>
 
   </div>
 
   <div class="card" style="margin-top:20px;">
+
     <h3>Actualizar información</h3>
 
     <label>Tratamiento:</label>
+
     <input type="text" id="nuevoTratamiento">
 
     <label>Próxima cita:</label>
+
     <input type="text" id="nuevaCita">
 
     <label>Indicaciones:</label>
+
     <input type="text" id="nuevasIndicaciones">
 
-    <button onclick="guardar()">Guardar</button>
+    <button onclick="guardar()">
+      Guardar
+    </button>
+
   </div>
 
 </section>
@@ -71,21 +137,38 @@
 </main>
 
 <footer>
-  <p>© 2026 DentalCare | Todos los derechos reservados</p>
+
+  <p>
+    © 2026 DentalCare | Todos los derechos reservados
+  </p>
+
 </footer>
 
 <script>
-function guardar() {
-  const t = document.getElementById("nuevoTratamiento").value;
-  const c = document.getElementById("nuevaCita").value;
-  const i = document.getElementById("nuevasIndicaciones").value;
 
-  if (t) document.getElementById("tratamiento").textContent = t;
-  if (c) document.getElementById("cita").textContent = c;
-  if (i) document.getElementById("indicaciones").textContent = i;
+function guardar() {
+
+  const t =
+    document.getElementById("nuevoTratamiento").value;
+
+  const c =
+    document.getElementById("nuevaCita").value;
+
+  const i =
+    document.getElementById("nuevasIndicaciones").value;
+
+  if (t)
+    document.getElementById("tratamiento").textContent = t;
+
+  if (c)
+    document.getElementById("cita").textContent = c;
+
+  if (i)
+    document.getElementById("indicaciones").textContent = i;
 
   alert("Información actualizada");
 }
+
 </script>
 
 </body>

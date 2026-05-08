@@ -1,153 +1,320 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="img/logo.pag.png" type="img/png">
-  <link rel="stylesheet" href="style.css">
+
   <title>Servicios</title>
+
+  <link
+    rel="icon"
+    href="{% static 'pacientes/img/logo.pag.png' %}"
+    type="image/png"
+  >
+
+  <link
+    rel="stylesheet"
+    href="{% static 'pacientes/style.css' %}"
+  >
+
 </head>
+
 <body>
 
-  <header>
-    <div class="encabezado">
-      <div class="logo">
-        <img src="img/dentistalogo.png" alt="logo" class="logo-img">
-        <p class="parrafo1">Dental Care</p>
-      </div>
+<header>
 
-      <nav>
-        <a href="dentista.html" class="nav-btn">Inicio</a>
-        <a href="sobrenosotros.html" class="nav-btn">¿Quiénes somos?</a>
-        <a href="citas.html" class="nav-btn">Citas</a>
-        <a href="mitratamiento.html" class="nav-btn">Mi tratamiento</a>
-       <a href="contacto.html" class="nav-btn">Contacto</a>
-      </nav>
-    </div>
-  </header>
+  <div class="encabezado">
 
-  <nav>
-        <a href="https://alejandrohclti.github.io/EQ5_PIA/index.html">Inicio</a>
-        <a href="https://alejandrohclti.github.io/EQ5_PIA/Servicios/servicios.html">Servicios</a>
-        <a href="https://alejandrohclti.github.io/EQ5_PIA/AgendarCita/crud_project_agendar_cita/app/templates/agendar_cita.html">Agendar Cita</a>
-        <a href="https://alejandrohclti.github.io/EQ5_PIA/SobreNosotros/index.html">Sobre Nosotros</a>
-         <a href="https://alejandrohclti.github.io/EQ5_PIA/Contactos/contactos.html">Contacto</a>
-  </nav>
+    <div class="logo">
 
-  <div class="container">
-    <h2>Nuestros Servicios</h2>
+      <img
+        src="{% static 'pacientes/img/dentistalogo.png' %}"
+        alt="logo"
+        class="logo-img"
+      >
 
-    <div class="servicios">
-      <div class="servicio">
-        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Limpieza dental">
-        <h3>Limpieza Dental</h3>
-        <p>Elimina la placa y el sarro para mantener tus dientes sanos y brillantes 😊</p>
-        <p>Duración: 45 minutos</p>
-        <p class="precio">$400 MXN</p>
-      </div>
+      <p class="parrafo1">Dental Care</p>
 
-      <div class="servicio">
-        <img src="https://cdn-icons-png.flaticon.com/512/2927/2927344.png" alt="Ortodoncia">
-        <h3>Ortodoncia</h3>
-        <p>Corrige la posición de tus dientes y mejora tu sonrisa con brackets o alineadores.</p>
-        <p>Duración: según tratamiento</p>
-        <p class="precio">Desde $1,200 MXN/mes</p>
-      </div>
-
-      <div class="servicio">
-        <img src="https://cdn-icons-png.flaticon.com/512/2927/2927346.png" alt="Blanqueamiento">
-        <h3>Blanqueamiento Dental</h3>
-        <p>Devuelve el brillo natural a tus dientes de manera rápida y segura.</p>
-        <p>Duración: 1 hora</p>
-        <p class="precio">$900 MXN</p>
-      </div>
-
-      <div class="servicio">
-        <img src="https://cdn-icons-png.flaticon.com/512/2927/2927353.png" alt="Extracciones">
-        <h3>Extracciones</h3>
-        <p>Procedimientos seguros y sin dolor para retirar piezas dañadas o retenidas.</p>
-        <p>Duración: 30 minutos</p>
-        <p class="precio">$600 MXN</p>
-      </div>
-
-      <div class="servicio">
-        <img src="https://cdn-icons-png.flaticon.com/512/6194/6194029.png" alt="Implantes dentales sonrisa">
-        <h3>Implantes Dentales</h3>
-        <p>Solución duradera y estética para reemplazar dientes perdidos y devolver tu sonrisa 😁</p>
-        <p>Duración: según evaluación</p>
-        <p class="precio">Desde $10,000 MXN</p>
-      </div>
-
-      <div class="servicio">
-        <img src="https://cdn-icons-png.flaticon.com/512/2927/2927342.png" alt="Chequeos">
-        <h3>Revisiones y Chequeos</h3>
-        <p>Evaluaciones completas para detectar y prevenir problemas bucales a tiempo.</p>
-        <p>Duración: 30 minutos</p>
-        <p class="precio">$300 MXN</p>
-      </div>
     </div>
 
-    <!-- ===== FORMULARIO DE COTIZACIÓN ===== -->
-    <div class="cotizacion">
-      <h3>🧾 Cotiza tu servicio</h3>
+    <nav>
 
-      <label for="servicio">Selecciona un servicio:</label>
-      <select id="servicio">
-        <option value="">-- Elige una opción --</option>
-        <option value="400">Limpieza Dental - $400</option>
-        <option value="1200">Ortodoncia - $1,200</option>
-        <option value="900">Blanqueamiento Dental - $900</option>
-        <option value="600">Extracción - $600</option>
-        <option value="10000">Implante Dental - $10,000</option>
-        <option value="300">Chequeo General - $300</option>
-      </select>
+      <a href="/dentista/" class="nav-btn">
+        Inicio
+      </a>
 
-      <label for="cantidad">Cantidad / Sesiones:</label>
-      <input type="number" id="cantidad" min="1" value="1">
+      <a href="/sobrenosotros/" class="nav-btn">
+        ¿Quiénes somos?
+      </a>
 
-      
+      <a href="/" class="nav-btn">
+        Citas
+      </a>
 
-      <button onclick="calcularCotizacion()">Calcular Cotización</button>
+      <a href="/mitratamiento/" class="nav-btn">
+        Mi tratamiento
+      </a>
 
-      <div class="resultado" id="resultado"></div>
-    </div>
+      <a href="/contacto/" class="nav-btn">
+        Contacto
+      </a>
+
+    </nav>
+
   </div>
 
-  <footer>
-    <p>© 2026 DentalCare | Todos los derechos reservados</p>
-  </footer>
+</header>
 
-  <!-- ===== SCRIPT ÚNICO ===== -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Mostrar saludo si hay usuario activo
-      const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'));
-      if (usuarioActivo) {
-        const span = document.getElementById('bienvenida');
-        if (span) span.textContent = `Bienvenido, ${usuarioActivo.nombre}`;
-      }
+<div class="container">
 
-      window.calcularCotizacion = function() {
-      const servicio = document.getElementById("servicio").value;
-      const cantidad = parseInt(document.getElementById("cantidad").value);
-      const resultadoDiv = document.getElementById("resultado");
+  <h2>Nuestros Servicios</h2>
 
-      if (!servicio) {
-        alert("Por favor selecciona un servicio.");
-        return;
-      }
-      if (cantidad < 1) {
-        alert("La cantidad debe ser al menos 1.");
-       return;
-      }
+  <div class="servicios">
 
-      const total = parseFloat(servicio) * cantidad;
+    <div class="servicio">
 
-      resultadoDiv.textContent = `💰 Total a pagar: $${total.toFixed(2)} MXN`;
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png"
+        alt="Limpieza dental"
+      >
 
-      alert(`Cotización generada:\nTotal: $${total.toFixed(2)} MXN`);
-    };
-    });
-  </script>
+      <h3>Limpieza Dental</h3>
+
+      <p>
+        Elimina la placa y el sarro para mantener tus dientes
+        sanos y brillantes 😊
+      </p>
+
+      <p>Duración: 45 minutos</p>
+
+      <p class="precio">$400 MXN</p>
+
+    </div>
+
+    <div class="servicio">
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2927/2927344.png"
+        alt="Ortodoncia"
+      >
+
+      <h3>Ortodoncia</h3>
+
+      <p>
+        Corrige la posición de tus dientes y mejora tu sonrisa
+        con brackets o alineadores.
+      </p>
+
+      <p>Duración: según tratamiento</p>
+
+      <p class="precio">
+        Desde $1,200 MXN/mes
+      </p>
+
+    </div>
+
+    <div class="servicio">
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2927/2927346.png"
+        alt="Blanqueamiento"
+      >
+
+      <h3>Blanqueamiento Dental</h3>
+
+      <p>
+        Devuelve el brillo natural a tus dientes
+        de manera rápida y segura.
+      </p>
+
+      <p>Duración: 1 hora</p>
+
+      <p class="precio">$900 MXN</p>
+
+    </div>
+
+    <div class="servicio">
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2927/2927353.png"
+        alt="Extracciones"
+      >
+
+      <h3>Extracciones</h3>
+
+      <p>
+        Procedimientos seguros y sin dolor para retirar piezas
+        dañadas o retenidas.
+      </p>
+
+      <p>Duración: 30 minutos</p>
+
+      <p class="precio">$600 MXN</p>
+
+    </div>
+
+    <div class="servicio">
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/6194/6194029.png"
+        alt="Implantes dentales"
+      >
+
+      <h3>Implantes Dentales</h3>
+
+      <p>
+        Solución duradera y estética para reemplazar dientes
+        perdidos y devolver tu sonrisa 😁
+      </p>
+
+      <p>Duración: según evaluación</p>
+
+      <p class="precio">
+        Desde $10,000 MXN
+      </p>
+
+    </div>
+
+    <div class="servicio">
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2927/2927342.png"
+        alt="Chequeos"
+      >
+
+      <h3>Revisiones y Chequeos</h3>
+
+      <p>
+        Evaluaciones completas para detectar y prevenir
+        problemas bucales a tiempo.
+      </p>
+
+      <p>Duración: 30 minutos</p>
+
+      <p class="precio">$300 MXN</p>
+
+    </div>
+
+  </div>
+
+  <!-- COTIZACIÓN -->
+  <div class="cotizacion">
+
+    <h3>🧾 Cotiza tu servicio</h3>
+
+    <label for="servicio">
+      Selecciona un servicio:
+    </label>
+
+    <select id="servicio">
+
+      <option value="">
+        -- Elige una opción --
+      </option>
+
+      <option value="400">
+        Limpieza Dental - $400
+      </option>
+
+      <option value="1200">
+        Ortodoncia - $1,200
+      </option>
+
+      <option value="900">
+        Blanqueamiento Dental - $900
+      </option>
+
+      <option value="600">
+        Extracción - $600
+      </option>
+
+      <option value="10000">
+        Implante Dental - $10,000
+      </option>
+
+      <option value="300">
+        Chequeo General - $300
+      </option>
+
+    </select>
+
+    <label for="cantidad">
+      Cantidad / Sesiones:
+    </label>
+
+    <input
+      type="number"
+      id="cantidad"
+      min="1"
+      value="1"
+    >
+
+    <button onclick="calcularCotizacion()">
+      Calcular Cotización
+    </button>
+
+    <div class="resultado" id="resultado"></div>
+
+  </div>
+
+</div>
+
+<footer>
+
+  <p>
+    © 2026 DentalCare | Todos los derechos reservados
+  </p>
+
+</footer>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  window.calcularCotizacion = function() {
+
+    const servicio =
+      document.getElementById("servicio").value;
+
+    const cantidad =
+      parseInt(document.getElementById("cantidad").value);
+
+    const resultadoDiv =
+      document.getElementById("resultado");
+
+    if (!servicio) {
+
+      alert("Por favor selecciona un servicio.");
+
+      return;
+    }
+
+    if (cantidad < 1) {
+
+      alert("La cantidad debe ser al menos 1.");
+
+      return;
+    }
+
+    const total =
+      parseFloat(servicio) * cantidad;
+
+    resultadoDiv.textContent =
+      `💰 Total a pagar: $${total.toFixed(2)} MXN`;
+
+    alert(
+      `Cotización generada:\nTotal: $${total.toFixed(2)} MXN`
+    );
+  };
+
+});
+
+</script>
+
 </body>
 </html>
