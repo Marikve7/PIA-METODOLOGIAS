@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link
+        rel="icon"
+        href="{% static 'pacientes/img/logo.pag.png' %}"
+        type="image/png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{% static 'pacientes/style.css' %}"
+    >
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="encabezado">
+
+        <div class="logo">
+
+            <img
+                src="{% static 'pacientes/img/dentistalogo.png' %}"
+                alt="logo"
+                class="logo-img"
+            >
+
+            <p class="parrafo1">Dental Care</p>
+
+        </div>
+
+        <nav>
+
+            <a href="/dentista/" class="nav-btn">
+                Inicio
+            </a>
+
+            <a href="/sobrenosotros/" class="nav-btn">
+                ¿Quiénes somos?
+            </a>
+
+            <a href="/" class="nav-btn">
+                Citas
+            </a>
+
+            <a href="/mitratamiento/" class="nav-btn">
+                Mi tratamiento
+            </a>
+
+            <a href="/contacto/" class="nav-btn">
+                Contacto
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<div class="container">
+
+    <div class="form-container">
+
+        <h2>Iniciar Sesión</h2>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="mensaje {{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Usuario"
+                required
+            >
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                required
+            >
+
+            <br><br>
+
+            <button
+                type="submit"
+                name="accion"
+                value="login"
+                class="nav-btn"
+            >
+                Iniciar Sesión
+            </button>
+
+            <button
+                type="submit"
+                name="accion"
+                value="registro"
+                class="nav-btn"
+            >
+                Registrarme
+            </button>
+
+        </form>
+
+        <br>
+
+        <p>{{ mensaje }}</p>
+
+    </div>
+
+</div>
+</body>
+</html>

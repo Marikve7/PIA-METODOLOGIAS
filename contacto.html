@@ -1,62 +1,109 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Contacto</title>
-  <link rel="icon" href="img/logo.pag.png" type="img/png">
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="{% static 'pacientes/img/logo.pag.png' %}" type="image/png">
+
+  <link rel="stylesheet" href="{% static 'pacientes/style.css' %}">
 </head>
 
 <body>
 
 <header>
+
   <div class="encabezado">
+
     <div class="logo">
-      <img src="img/dentistalogo.png" alt="logo" class="logo-img">
+
+      <img
+        src="{% static 'pacientes/img/dentistalogo.png' %}"
+        alt="logo"
+        class="logo-img"
+      >
+
       <p class="parrafo1">Dental Care</p>
+
     </div>
 
     <nav>
-      <a href="dentista.html" class="nav-btn">Inicio</a>
-      <a href="sobrenosotros.html" class="nav-btn">¿Quienes somos?</a>
-      <a href="citas.html" class="nav-btn">Citas</a>
-      <a href="servicios.html" class="nav-btn">Servicios</a>
-      <a href="tratamiento.html" class="nav-btn">Mi tratamiento</a>
+
+      <a href="/dentista/" class="nav-btn">
+        Inicio
+      </a>
+
+      <a href="/sobrenosotros/" class="nav-btn">
+        ¿Quiénes somos?
+      </a>
+
+      <a href="/" class="nav-btn">
+        Citas
+      </a>
+
+      <a href="/servicios/" class="nav-btn">
+        Servicios
+      </a>
+
+      <a href="/mitratamiento/" class="nav-btn">
+        Mi tratamiento
+      </a>
+
     </nav>
+
   </div>
+
 </header>
 
 <main>
 
 <section class="container">
+
   <h2>📞 Contacto</h2>
 
   <div class="grid">
 
     <!-- FORMULARIO -->
     <div class="card">
+
       <h3>Envíanos un mensaje</h3>
 
       <label>Nombre:</label>
+
       <input type="text" id="nombre">
 
       <label>Correo:</label>
+
       <input type="email" id="correo">
 
       <label>Mensaje:</label>
+
       <textarea id="mensaje" rows="4"></textarea>
 
-      <button onclick="enviarMensaje()">Enviar</button>
+      <button onclick="enviarMensaje()">
+        Enviar
+      </button>
+
     </div>
 
-    <!-- INFO -->
+    <!-- INFORMACIÓN -->
     <div class="card">
+
       <h3>Información</h3>
+
       <p>📍 Monterrey, Nuevo León</p>
+
       <p>📞 81 1234 5678</p>
+
       <p>📧 contacto@dentista.com</p>
+
       <p>🕒 Lunes a Viernes: 9am - 7pm</p>
+
     </div>
 
   </div>
@@ -66,22 +113,36 @@
 </main>
 
 <footer>
-    <p>© 2026 DentalCare | Todos los derechos reservados</p>
+
+  <p>
+    © 2026 DentalCare | Todos los derechos reservados
+  </p>
+
 </footer>
 
 <script>
+
 function enviarMensaje() {
-  const nombre = document.getElementById("nombre").value;
-  const correo = document.getElementById("correo").value;
-  const mensaje = document.getElementById("mensaje").value;
+
+  const nombre =
+    document.getElementById("nombre").value;
+
+  const correo =
+    document.getElementById("correo").value;
+
+  const mensaje =
+    document.getElementById("mensaje").value;
 
   if (!nombre || !correo || !mensaje) {
+
     alert("Por favor completa todos los campos");
+
     return;
   }
 
   alert("Mensaje enviado correctamente");
 }
+
 </script>
 
 </body>
